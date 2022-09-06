@@ -1,0 +1,12 @@
+@use "../../assets/sass/_variables.scss" as *;
+
+.counterButtons {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+.button {
+    text-align: center;
+    border: solid 2px green;
+}

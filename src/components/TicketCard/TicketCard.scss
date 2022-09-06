@@ -1,0 +1,8 @@
+@use "../../assets/sass/_variables.scss" as *;
+
+.ticketCard {
+    width: 10rem;
+    height: 17rem;
+
+    border: solid 2px purple;
+}
