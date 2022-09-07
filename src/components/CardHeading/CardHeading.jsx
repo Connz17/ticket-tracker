@@ -1,12 +1,17 @@
 import "./CardHeading.scss";
 
 import React from 'react'
+//use props to change the name of employee
 
-const CardHeading = () => {
+const CardHeading = (props) => {
+
+        const {name, role} = props
+
+
   return (
     <>
-    <h1>Name</h1>
-    <h2>Role</h2>
+    <h2>{name}</h2>
+    <h2>{role}</h2>
     </>
   )
 }
