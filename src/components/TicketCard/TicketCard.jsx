@@ -1,26 +1,18 @@
 import CardHeading from "../CardHeading/CardHeading";
 import Counter from "../Counter/Counter";
- import team from "../../data/team";
 
 import "./TicketCard.scss";
 
 import React from 'react'
 
-const TicketCard = () => {
+const TicketCard = (props) => {
 
-    const teamJSX = team.map((person)=> {
-        return (
-        <>
-        <CardHeading name={person.name} role={person.role} />
-        </>
-        )
-    })
-
+  const {name, role} = props;
 
   return (
     <div className="ticketCard">
-        {teamJSX}
-        <Counter />
+    <CardHeading name={name} role={role} />
+    <Counter />
     </div>
   )
 }

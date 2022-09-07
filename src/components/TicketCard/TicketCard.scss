@@ -3,6 +3,11 @@
 .ticketCard {
     width: 10rem;
     height: 17rem;
+    margin: .5rem;
+    box-shadow: 9px 10px 7px;
+    border-radius: 5px;
 
-    border: solid 2px purple;
+    font-family: $font-family;
+    background-color: $card-color;
+
 }

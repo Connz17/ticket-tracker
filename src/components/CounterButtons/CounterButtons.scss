@@ -1,12 +1,18 @@
 @use "../../assets/sass/_variables.scss" as *;
 
 .counterButtons {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-end;
+    text-align: center;
+
 }
 
 .button {
     text-align: center;
-    border: solid 2px green;
+    background-color: $button-color;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 10px;
+}
+
+.button:hover{
+    background-color: green;
 }

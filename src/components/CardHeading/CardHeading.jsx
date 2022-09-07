@@ -10,8 +10,8 @@ const CardHeading = (props) => {
 
   return (
     <>
-    <h2>{name}</h2>
-    <h2>{role}</h2>
+    <h2 className="card__name">{name}</h2>
+    <h3>{role}</h3>
     </>
   )
 }

@@ -5,9 +5,14 @@
     height: auto;
     max-width: 100%;
 
-    border: solid 2px blue;
 }
 
 .number {
     font-size: 1.5rem;
+    color: $number-color;
+}
+
+.counter__buttons{
+    display: flex;
+    justify-content: space-around;
 }

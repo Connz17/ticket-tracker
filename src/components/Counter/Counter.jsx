@@ -1,21 +1,32 @@
 import CounterButtons from "../CounterButtons/CounterButtons";
 import "./Counter.scss";
 
-import React from 'react'
+import React, { useState } from 'react'
 
-let ticketCount = 0
+
 
 
 const Counter = () => {
 
+    const [ticketCount, setTicketCount] = useState(0)
 
+    const handleDecrease = () => {
+        console.log("down");
+        setTicketCount(ticketCount - 1);
+  }
+      const handleIncrease = () => {
+        console.log("up");
+        setTicketCount(ticketCount + 1);
+    };
 
   return (
     <div className="counter__card">
-        <h2>Counter</h2>
+        <h3>Counter</h3>
         <div className="number">{ticketCount}</div>
-        <CounterButtons buttonText={"+"} />
-        <CounterButtons buttonText={"-"} />
+        <div className="counter__buttons">
+            <CounterButtons handleChange={handleDecrease} buttonText={"-"} />
+            <CounterButtons handleChange={handleIncrease} buttonText={"+"} />
+        </div>
     </div>
   )
 };

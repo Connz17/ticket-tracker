@@ -1,7 +1,10 @@
 @use "../../assets/sass/_variables.scss" as *;
 
 .main {
-    height: 70vh;
+    height: 80vh;
+    display: flex;
+    flex-wrap: wrap;
 
-    border: solid 2px red;
+    background: rgb(112,90,238);
+    background: linear-gradient(90deg, rgba(112,90,238,1) 10%, rgba(81,143,213,1) 50%, rgba(2,8,164,1) 90%);
 }

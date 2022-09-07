@@ -1,1 +1,6 @@
 @use "../../assets/sass/_variables.scss" as *;
+
+.card__name {
+    font-size: larger;
+    padding: 0.7rem;
+}

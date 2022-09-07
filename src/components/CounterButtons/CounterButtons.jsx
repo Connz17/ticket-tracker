@@ -4,12 +4,13 @@ import React from 'react'
 
 const CounterButtons = (props) => {
 
-    const buttonText = props;
+    const {buttonText, handleChange} = props;
+    console.log(buttonText);
     
 
   return (
     <div className="counterButtons">        
-        <button className="button">{buttonText}</button>
+        <button onClick={handleChange} className="button">{buttonText}</button>
     </div>
   )
 
