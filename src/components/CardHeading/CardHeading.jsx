@@ -11,7 +11,7 @@ const CardHeading = (props) => {
   return (
     <>
     <h2 className="card__name">{name}</h2>
-    <h3>{role}</h3>
+    <h3 className="card__role">{role}</h3>
     </>
   )
 }

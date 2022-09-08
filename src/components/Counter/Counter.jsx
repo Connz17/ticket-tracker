@@ -10,24 +10,42 @@ const Counter = () => {
 
     const [ticketCount, setTicketCount] = useState(0)
 
+
     const handleDecrease = () => {
-        console.log("down");
+        if (ticketCount === 0) {
+            return
+        }
         setTicketCount(ticketCount - 1);
   }
       const handleIncrease = () => {
-        console.log("up");
+
         setTicketCount(ticketCount + 1);
     };
 
+//   if (ticketCount > 0 && ticketCount < 5) {
+//             ticketCount.style.color = "red";
+//         }
+
+        // switch (ticketCount) {
+        //     case ticketCount < 5:
+        //         ticketCount.style.color = "red";
+        //         break;
+        
+        //     default:
+        //         break;
+        // }
+
   return (
+    <>
     <div className="counter__card">
-        <h3>Counter</h3>
+        <h3 className="counter__heading">Counter</h3>
         <div className="number">{ticketCount}</div>
-        <div className="counter__buttons">
+    </div>
+    <div className="counter__buttons">
             <CounterButtons handleChange={handleDecrease} buttonText={"-"} />
             <CounterButtons handleChange={handleIncrease} buttonText={"+"} />
-        </div>
     </div>
+    </>
   )
 };
 

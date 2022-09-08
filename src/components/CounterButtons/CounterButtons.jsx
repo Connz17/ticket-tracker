@@ -5,7 +5,6 @@ import React from 'react'
 const CounterButtons = (props) => {
 
     const {buttonText, handleChange} = props;
-    console.log(buttonText);
     
 
   return (

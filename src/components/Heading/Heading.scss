@@ -1,2 +1,12 @@
 @use "../../assets/sass/_variables.scss" as *;
 
+.heading {
+    display: flex;
+    justify-content: center;
+}
+
+
+.heading__image {
+    height: auto;
+    max-width: 10%;
+}

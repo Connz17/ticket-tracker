@@ -2,9 +2,19 @@
 
 .counter__card {
     align-content: center;
-    height: auto;
-    max-width: 100%;
+    margin: auto;
+    height: 30%;
+    max-width: 80%;
+    border-radius: 7px;
+    //box-shadow: inset 7px 7px 15px;
+    background: $card-color;
+    background: linear-gradient(215deg, $card-color 25%, rgba(148,187,233,1) 50%, $card-color 75%);
 
+}
+
+.counter__heading {
+    padding-top: 0.7rem;
+    color: $number-color;
 }
 
 .number {
@@ -15,4 +25,5 @@
 .counter__buttons{
     display: flex;
     justify-content: space-around;
+    margin-top: 1rem;
 }
