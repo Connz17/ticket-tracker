@@ -14,14 +14,16 @@
     flex-wrap: wrap;
 }
 
-// .form_container {
-//     display: flex;
-//     flex-direction: column;
-// }
+.form__container {
+    margin: 1rem;
+}
 
 .form {
     display: flex;
     flex-direction: column;
+    margin: auto;
+    font-family: $font-family;
+    color: white;
 
     width: 10rem;
 }

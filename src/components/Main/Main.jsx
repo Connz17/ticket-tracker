@@ -3,11 +3,38 @@ import team from "../../data/team";
 
 import TicketCard from "../TicketCard/TicketCard";
 
-import React from 'react'
+
+
+import React, { useState } from 'react'
+
 
 const Main = () => {
+
     
-    const teamJSX = team.map((person)=> {
+        const [newName, setNewName] = useState("")
+        const [newRole, setNewRole] = useState("")
+
+        const newTeam = [...team]
+
+        const [updatedTeam, setUpdatedTeam] = useState(newTeam)
+
+
+    
+    const newEmployee = {
+        id: newTeam.length + 1,
+        name: newName,
+        role: newRole,  
+    }
+    
+    
+    const handleNewEmployee = (e) => {
+        e.preventDefault()
+        team.push(newEmployee)
+        setUpdatedTeam(newTeam)
+        
+    }
+    
+    const teamJSX = newTeam.map((person)=> {
         return (
         <div key={person.id}>
         <TicketCard name={person.name} role={person.role} />
@@ -15,20 +42,24 @@ const Main = () => {
         )
     })
 
+
+
     
   return (
     <div className="main">
         <div className="card__container">
             {teamJSX}
         </div>
-        <div className="form_container">
-            <form className="form" action="./Main.jsx">
-                <label htmlFor="firstN">First Name: </label>
-                <input type="text" id="firstN" placeholder="John"/>
-                <label htmlFor="lastN">Last Name: </label>
-                <input type="text" id="lastN" placeholder="Doe"/>
-                <input type="submit" value="ADD" />
-            </form>
+        <div className="form__container">
+        <form className="form">
+            <label htmlFor="name">Full Name: </label>
+            <input type="text" id="name" placeholder="John Doe"
+                vale={newName} onChange={(e) => setNewName(e.target.value)}/>
+            <label htmlFor="role">Role: </label>
+            <input type="text" id="role" placeholder="Junior Software Engineer"
+                vale={newRole} onChange={(e) => setNewRole(e.target.value)}/>
+            <button onClick={handleNewEmployee}>ADD</button>
+        </form>
         </div>
     </div>
   )
