@@ -2,9 +2,26 @@
 
 .main {
     height: 80vh;
-    display: flex;
-    flex-wrap: wrap;
+
 
     background: rgb(112,90,238);
     background: linear-gradient(90deg, rgba(112,90,238,1) 10%, rgba(81,143,213,1) 50%, rgba(2,8,164,1) 90%);
+}
+
+
+.card__container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+// .form_container {
+//     display: flex;
+//     flex-direction: column;
+// }
+
+.form {
+    display: flex;
+    flex-direction: column;
+
+    width: 10rem;
 }

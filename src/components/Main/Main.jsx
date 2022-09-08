@@ -18,7 +18,18 @@ const Main = () => {
     
   return (
     <div className="main">
-        {teamJSX}
+        <div className="card__container">
+            {teamJSX}
+        </div>
+        <div className="form_container">
+            <form className="form" action="./Main.jsx">
+                <label htmlFor="firstN">First Name: </label>
+                <input type="text" id="firstN" placeholder="John"/>
+                <label htmlFor="lastN">Last Name: </label>
+                <input type="text" id="lastN" placeholder="Doe"/>
+                <input type="submit" value="ADD" />
+            </form>
+        </div>
     </div>
   )
 }
