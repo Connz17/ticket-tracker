@@ -1,7 +1,7 @@
 @use "../../assets/sass/_variables.scss" as *;
 
 .main {
-    height: 80vh;
+    min-height: 80vh;
 
 
     background: rgb(112,90,238);
