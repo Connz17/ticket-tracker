@@ -6,32 +6,35 @@ import TicketCard from "../TicketCard/TicketCard";
 
 
 import React, { useState } from 'react'
+import Form from "../Form/Form";
 
 
 const Main = () => {
-
+const newTeam = [...team]
     
         const [newName, setNewName] = useState("")
         const [newRole, setNewRole] = useState("")
-
-        const newTeam = [...team]
-
         const [updatedTeam, setUpdatedTeam] = useState(newTeam)
 
-
-    
     const newEmployee = {
         id: newTeam.length + 1,
         name: newName,
         role: newRole,  
+    }    
+    
+    const handleNameInput = (e) => {
+        setNewName(e.target.value);
     }
-    
-    
+
+    const handleRoleInput = (e) => {
+        setNewRole(e.target.value);
+    }
+
     const handleNewEmployee = (e) => {
         e.preventDefault()
         team.push(newEmployee)
         setUpdatedTeam(newTeam)
-        
+        console.log(newEmployee);
     }
     
     const teamJSX = newTeam.map((person)=> {
@@ -42,24 +45,13 @@ const Main = () => {
         )
     })
 
-
-
-    
   return (
     <div className="main">
         <div className="card__container">
             {teamJSX}
         </div>
         <div className="form__container">
-        <form className="form">
-            <label htmlFor="name">Full Name: </label>
-            <input type="text" id="name" placeholder="John Doe"
-                vale={newName} onChange={(e) => setNewName(e.target.value)}/>
-            <label htmlFor="role">Role: </label>
-            <input type="text" id="role" placeholder="Junior Software Engineer"
-                vale={newRole} onChange={(e) => setNewRole(e.target.value)}/>
-            <button onClick={handleNewEmployee}>ADD</button>
-        </form>
+            <Form formName={handleNameInput} formRole={handleRoleInput} handleNewEmployee={handleNewEmployee}/>
         </div>
     </div>
   )
