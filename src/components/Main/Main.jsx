@@ -34,7 +34,6 @@ const newTeam = [...team]
         e.preventDefault()
         team.push(newEmployee)
         setUpdatedTeam(newTeam)
-        console.log(newEmployee);
     }
     
     const teamJSX = newTeam.map((person)=> {
