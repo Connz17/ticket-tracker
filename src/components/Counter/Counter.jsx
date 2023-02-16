@@ -10,7 +10,7 @@ const Counter = () => {
 
     const [ticketCount, setTicketCount] = useState(0)
 
-    const [style, setStyle] = useState("red")
+    const [style, setStyle] = useState("white")
 
 
     const handleDecrease = () => {
@@ -19,32 +19,32 @@ const Counter = () => {
         }
         setTicketCount(ticketCount - 1);
         if (ticketCount < 16) {
-            setStyle("blue")
+            setStyle("orange") 
         }
         if (ticketCount < 11) {
-            setStyle("green")
-        }
-        if (ticketCount < 8) {
             setStyle("yellow")
         }
+        if (ticketCount < 8) {
+            setStyle("green")
+        }
         if (ticketCount < 4) {
-            setStyle("red")
+            setStyle("white")
         }
         
   }
       const handleIncrease = () => {
     setTicketCount(ticketCount + 1);
         if (ticketCount > 1 ) {
-            setStyle("yellow")
-        }
-        if (ticketCount > 5 ) {
             setStyle("green")
         }
+        if (ticketCount > 5 ) {
+            setStyle("yellow")
+        }
         if (ticketCount > 8 ) {
-            setStyle("blue")
+            setStyle("orange")
         }
         if (ticketCount > 13 ) {
-            setStyle("white")
+            setStyle("red")
         }
         
 
