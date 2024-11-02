@@ -1,5 +1,4 @@
 import "./CardHeading.scss";
-
 import React from 'react'
 //use props to change the name of employee
 

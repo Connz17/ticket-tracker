@@ -1,6 +1,5 @@
 import CounterButtons from "../CounterButtons/CounterButtons";
 import "./Counter.scss";
-
 import React, { useState } from 'react'
 
 

@@ -1,10 +1,6 @@
 import "./Main.scss";
 import team from "../../data/team";
-
 import TicketCard from "../TicketCard/TicketCard";
-
-
-
 import React, { useState } from 'react'
 import Form from "../Form/Form";
 
